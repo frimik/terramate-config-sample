@@ -1,0 +1,1 @@
+# terramate-config-sample
