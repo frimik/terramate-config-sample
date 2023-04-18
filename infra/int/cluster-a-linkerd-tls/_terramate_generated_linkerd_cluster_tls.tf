@@ -6,7 +6,7 @@ module "cluster_tls" {
     aws.cluster = aws.cluster
     aws.root    = aws.root
   }
-  source                         = "../../../modules/infra/linkerd/linkerd-cluster-tls"
+  source                         = "../../../modules/linkerd/linkerd-cluster-tls"
   webhook_issuer_local_file_path = "${path.root}/${local.tm_data_path}/linkerd-cluster-tls/${var.cluster_name}/webhook_issuer.pem"
 }
 variable "cluster_name" {

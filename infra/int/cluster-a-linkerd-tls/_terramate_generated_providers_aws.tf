@@ -43,3 +43,18 @@ provider "aws" {
     }
   }
 }
+
+provider "aws" {
+  alias = "foo"
+  region = "us-east-1"
+  assume_role {
+    role_arn = "arn:aws:iam::123456789303:role/infra/terraformer"
+  }
+  allowed_account_ids = [123456789303]
+
+  default_tags {
+    tags = {
+      TerraformRoot = "infra/int/cluster-a-linkerd-tls"
+    }
+  }
+}

@@ -8,7 +8,7 @@ generate_hcl "_terramate_generated_linkerd_cluster_tls.tf" {
   content {
 
     module "cluster_tls" {
-      source = "${terramate.stack.path.to_root}/modules/infra/linkerd/linkerd-cluster-tls"
+      source = "${terramate.stack.path.to_root}/modules/linkerd/linkerd-cluster-tls"
 
       providers = {
         aws.cluster = aws.cluster
